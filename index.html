@@ -1,0 +1,230 @@
+<html>
+<head>
+ <title>LightsOut Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Anton'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/index.js"></script>
+</head>
+<body>
+
+<!-- First screen -->
+
+<div class="first_screen">
+ <div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="space_rows">
+      </div>
+    </div>
+
+
+    <div class="col-sm-4"><div class="splash_container">
+      <center>
+      <img src="images/icon.png" class="img-responsive" id="imageicon"/>
+      <div class="instraction"><p><strong>Try to eliminate all the boxes to win. When you check a box, all the squares around it (one above, and one to each side) are unselected. 
+Addictive.</strong></p></div>
+    </center>
+  </br>
+
+
+      <div id="button_div">
+   <!-- <button class="play_btn btn btn-danger btn-lg">PLAY</button> -->
+   <img src="images/play_icon.png" class="img-responsive play_btn"/>
+ </div>
+    </div>
+    </div>
+
+
+    <div class="col-sm-4">
+      <div class="space_rows">
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+  </div>
+
+<!-- End of First screen -->
+
+<!-- Game screen -->
+ 
+<div class="game_screen">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    <div class="space_rows"></div>
+    </div>
+    <div class="col-sm-6" >
+    <div class="game_container">
+      <div id="game_box">
+        <div class="timer_restart_div">
+        <div class="timer">TIME: <span id="mnts2">0</span><span id="mnts1">0</span>:<span class="seconds2">0</span><span class="seconds1">0</span></div>
+        <span class="restart">RESTART</span>
+      </div>
+      <table>
+  <tr>
+    <td><div id="div1" class="divs"></div></td>
+    <td><div id="div2" class="divs"></div></td>
+    <td><div id="div3" class="divs"></div></td>
+    <td><div id="div4" class="divs"></div></td>
+    <td><div id="div5" class="divs"></div></td>
+  </tr>
+  <tr>
+   <td><div id="div6" class="divs"></div></td>
+    <td><div id="div7" class="divs"></div></td>
+    <td><div id="div8" class="divs"></div></td>
+    <td><div id="div9" class="divs"></div></td>
+    <td><div id="div10" class="divs"></div></td>
+  </tr>
+  <tr>
+    <td><div id="div11" class="divs"></div></td>
+    <td><div id="div12" class="divs"></div></td>
+    <td><div id="div13" class="divs"></div></td>
+    <td><div id="div14" class="divs"></div></td>
+    <td><div id="div15" class="divs"></div></td>
+  </tr>
+  <tr>
+   <td><div id="div16" class="divs"></div></td>
+    <td><div id="div17" class="divs"></div></td>
+    <td><div id="div18" class="divs"></div></td>
+    <td><div id="div19" class="divs"></div></td>
+    <td><div id="div20" class="divs"></div></td>
+  </tr>
+  <tr>
+    <td><div id="div21" class="divs"></div></td>
+    <td><div id="div22" class="divs"></div></td>
+    <td><div id="div23" class="divs"></div></td>
+    <td><div id="div24" class="divs"></div></td>
+    <td><div id="div25" class="divs"></div></td>
+  </tr>
+  
+</table>
+</div>
+    </div>
+    </div>
+    <div class="col-sm-3" >
+    <div class="space_rows"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- End of game screen -->
+
+<!-- Restart button screen -->
+<div class="restart_div preload">
+        <button class="restart_btn animated bounceInUp">Level Completed<br>
+          <small class="small_text">Click for next level</small>
+        </button>
+      </div>
+
+<!-- Restart button end screen -->
+
+<!-- Loding next level screen -->
+
+  <div class="preload">
+      <div class="logo">
+        Please-<span style="color:darkturquoise;">Wait...</span>
+      </div>
+      <div class="loader-frame">
+        <div class="loader1" id="loader1"></div>
+        <div class="loader2" id="loader2"></div>
+      </div>
+    </div>
+<!-- Loding next level ending screen -->
+<div class="final_container">
+<div class="container">
+<div class="row">
+    <div class="col-sm-2"><div class="space_rows"></div></div>
+
+
+    <div class="col-sm-8">
+      <div class="result_container">
+        <div class="animated zoomIn">
+          <center>
+          <div id="inner_div">
+          <h1 id="score" class="text-center">Your Score</h1>
+          <center>
+           <span id="go_score">0</span>
+         </center>
+
+          <center>
+          <p id="fails">
+      <strong id="textValue" style="color:red;">Cheer! 
+        you did your best to become the best that you are capable of becoming. Effort to collect more & build up the points!</strong>
+      </p>
+       </center>
+
+       <div id="restart_moregames">
+
+           <a class="retry" id="retry">
+              <button class="button btn-xs search">Retry</button>
+              </a>
+
+               <a id="moregames" href="http://sosimplegames.com/" target="_blank">
+                            <button class="button btn-xs arrow">More Games</button>
+                        </a>
+
+<!-- 
+        <div class="row">
+                    <div class="col-sm-6 col-xs-6">
+                      <center>
+                        <a id="retry">
+                            <button class="button btn-xs search">Retry</button>
+                        </a>
+                      </center>
+                    </div>
+                    <div class="col-sm-6 col-xs-6">
+                      <center>
+                        <a href="http://sosimplegames.com/" target="_blank">
+                            <button class="button btn-xs arrow">MoreGames</button>
+                        </a>
+                      </center>
+                    </div>
+                </div> -->
+       </div>
+
+     <!--   <div id="restart_moregames">
+     <a href="#" id="retry" class ="retry">Retry</a>
+    <a href="http://sosimplegames.com/" target="_blank">More Games</a>
+  </div> -->
+</br>
+   <center>
+  <p id="tags">
+      <strong style="color:red;"  id="share_text">TAG, you're it! CHALLENGE your FRIENDS by tagging them in the post. To share click on "SHARE ON FACEBOOK" button.</strong>
+      </p>
+    </center>
+  
+
+   <div id="share"><center><button class="shareFacebookBtn shareFacebookBtn--facebook">
+                            Share on Facebook
+                        </button></center></div> 
+
+    </div>
+  </center>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-2"><div class="space_rows"></div></div>
+
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
